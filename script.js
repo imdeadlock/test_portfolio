@@ -1,17 +1,35 @@
 
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle with overlay, aria, and scroll lock
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+const overlay = document.querySelector('.nav-overlay');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+function setNavState(isOpen) {
+    navLinks.classList.toggle('active', isOpen);
+    overlay && overlay.classList.toggle('active', isOpen);
+    document.body.classList.toggle('no-scroll', isOpen);
+    if (hamburger) hamburger.setAttribute('aria-expanded', String(isOpen));
+}
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        const isOpen = !navLinks.classList.contains('active');
+        setNavState(isOpen);
+    });
+}
+
+if (overlay) {
+    overlay.addEventListener('click', () => setNavState(false));
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
+    link.addEventListener('click', () => setNavState(false));
+});
+
+// Close on Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setNavState(false);
 });
 
 // Form submission (placeholder)
@@ -63,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Navigation dots functionality
-const sections = document.querySelectorAll('.full-screen-section');
+const sections = document.querySelectorAll('.full-screen-section, .full-screen-section-about, .full-screen-section-contact');
 const navDots = document.querySelectorAll('.nav-dot');
 
 // Update active dot based on scroll position
@@ -95,21 +113,9 @@ navDots.forEach(dot => {
         const targetSection = document.getElementById(targetId);
 
         window.scrollTo({
-            top: targetSection.offsetTop,
+            top: targetSection.offsetTop - 70,
             behavior: 'smooth'
         });
     });
 });
-    // Simple animation for skill bars
-        document.addEventListener('DOMContentLoaded', function () {
-            const skillBars = document.querySelectorAll('.skill-progress');
-
-            skillBars.forEach(bar => {
-                const level = bar.getAttribute('data-level');
-                bar.style.width = '0%';
-
-                setTimeout(() => {
-                    bar.style.width = level + '%';
-                }, 300);
-            });
-        });
+// Remove duplicate simple animation block (now handled by IntersectionObserver)

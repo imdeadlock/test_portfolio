@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Arya | Data Science Portfolio</title>
+    <meta name="theme-color" content="#111827">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -46,21 +50,43 @@
     <!-- Hero Section -->
     <section class="hero full-screen-section-about" id="home">
         <div class="container">
-            <div class="hero-content">
-                <h1>Rahul Arya</h1>
-                <h2>Data Scientist & Analytics Professional</h2>
-                <p>I am a Data Science & Analytics professional with a strong foundation in Operations
-                    Research and Computer Applications.
-                    With over 4 years of experience in data operations and healthcare analytics, I leverage machine
-                    learning and statistical techniques to turn raw information into meaningful, actionable
-                    solutions that drive smarter decisions and passion for transforming complex datasets into actionable
-                    insights.</p>
-                <p>with expertise in Excel, Power BI, Python, SQL and statistical
-                    modelling. My experience includes collecting, cleaning, and validating large-scale surveillance
-                    data,
-                    designing interactive dashboards, and developing machine learning models for various
-                    applications including demand forecasting and risk assessment.</p>
-                <a href="#contact" class="btn">Get In Touch</a>
+            <div class="hero-grid">
+                <div class="hero-text-card">
+                    <div class="hero-content">
+                        <h1>Rahul Arya</h1>
+                        <h2>Data Scientist & Analytics Professional</h2>
+                        <p>I am a data science and analytics professional with a strong foundation in Operations
+                            Research and Computer Applications. With over 4 years of experience in data operations and
+                            healthcare analytics, I specialize in transforming complex datasets into actionable insights
+                            using machine learning, statistical modeling, and data visualization techniques.</p>
+                        <p>My technical toolkit includes Python, SQL, Power BI, and Excel, along with hands-on
+                            experience in building interactive dashboards, cleaning and validating large-scale
+                            surveillance data, and developing predictive models tailored to real-world applications.</p>
+                        <div class="hero-actions">
+                            <a href="#contact" class="btn">Get In Touch</a>
+                            <a href="files/Rahul_Arya.pdf" class="btn btn-outline">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-card">
+                    <div class="hero-image-container">
+                        <div class="hero-image-bg"></div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">4+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">80%</div>
+                                <div class="stat-label">Model Accuracy</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">$20M+</div>
+                                <div class="stat-label">Data Analyzed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -332,8 +358,8 @@
     <section id="skills" class="full-screen-section">
         <div class="container">
             <div class="section-title">
-                <h2>Skills & Abilities</h2>
-                <p>Technical expertise and professional competencies</p>
+                <h2>Tech Stack & Skills</h2>
+                <p>Tools I love and use to build data-driven solutions</p>
             </div>
             <div class="skills-visual-container">
                 <!-- Programming Skills -->
@@ -584,29 +610,24 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
+                    <div class="project-img"><i class="fas fa-vial"></i></div>
                     <div class="project-content">
-                        <h3>Retail Demand Forecasting for Inventory Optimization</h3>
-                        <p>Built and evaluated demand forecasting models (Linear Regression, Random Forest, ARIMA)
-                            achieving up to 90% accuracy.</p>
+                        <h3>A/B Testing & Regression Analysis of Ad Campaigns</h3>
+                        <p>Compared Facebook vs Google ads using A/B testing and regression (R² = 81.5%) to optimize
+                            spend.</p>
                         <div class="project-tags">
                             <div class="project-tag">Python</div>
-                            <div class="project-tag">Machine Learning</div>
-                            <div class="project-tag">Time Series</div>
+                            <div class="project-tag">A/B Testing</div>
+                            <div class="project-tag">Regression</div>
                         </div>
                         <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
+                    <div class="project-img"><i class="fas fa-shield-alt"></i></div>
                     <div class="project-content">
                         <h3>Credit Risk Assessment & Default Prediction</h3>
-                        <p>Developed a Machine Learning Random Forest model (92% accuracy) to predict high risk
-                            borrowers.</p>
+                        <p>Random Forest and Logistic Regression to flag high-risk borrowers with tuned thresholds.</p>
                         <div class="project-tags">
                             <div class="project-tag">Python</div>
                             <div class="project-tag">Random Forest</div>
@@ -616,17 +637,81 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
+                    <div class="project-img"><i class="fas fa-box"></i></div>
                     <div class="project-content">
-                        <h3>Sales Report Dashboard</h3>
-                        <p>Developed interactive Power BI dashboards with visualizations showcasing daily/monthly order
-                            trends.</p>
+                        <h3>Retail Demand Forecasting</h3>
+                        <p>Forecasted product demand; improved prediction accuracy by 37% over baseline.</p>
+                        <div class="project-tags">
+                            <div class="project-tag">Python</div>
+                            <div class="project-tag">Time Series</div>
+                            <div class="project-tag">Regression</div>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"><i class="fas fa-plane"></i></div>
+                    <div class="project-content">
+                        <h3>Airline Satisfaction Churn Analysis</h3>
+                        <p>Built models to predict churn using service satisfaction signals and advised retention moves.
+                        </p>
+                        <div class="project-tags">
+                            <div class="project-tag">Classification</div>
+                            <div class="project-tag">EDA</div>
+                            <div class="project-tag">Python</div>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"><i class="fas fa-notes-medical"></i></div>
+                    <div class="project-content">
+                        <h3>Medical Insurance Price Prediction</h3>
+                        <p>Multiple Linear Regression achieving 80% accuracy; identified smoker status as key driver.
+                        </p>
+                        <div class="project-tags">
+                            <div class="project-tag">Regression</div>
+                            <div class="project-tag">EDA</div>
+                            <div class="project-tag">Python</div>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"><i class="fas fa-signal"></i></div>
+                    <div class="project-content">
+                        <h3>Telecom Customer Churn Prediction</h3>
+                        <p>Improved accuracy from 77% to 83% using Random Forest with class balancing.</p>
+                        <div class="project-tags">
+                            <div class="project-tag">Classification</div>
+                            <div class="project-tag">Random Forest</div>
+                            <div class="project-tag">Python</div>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"><i class="fas fa-pizza-slice"></i></div>
+                    <div class="project-content">
+                        <h3>Pizza Sales Analytics (Power BI)</h3>
+                        <p>Interactive dashboard highlighting KPIs and top products; $20M analyzed.</p>
                         <div class="project-tags">
                             <div class="project-tag">Power BI</div>
                             <div class="project-tag">SQL</div>
                             <div class="project-tag">DAX</div>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"><i class="fas fa-utensils"></i></div>
+                    <div class="project-content">
+                        <h3>Zomato Exploratory Data Analysis</h3>
+                        <p>Extracted actionable insights through deep EDA and visual storytelling.</p>
+                        <div class="project-tags">
+                            <div class="project-tag">Python</div>
+                            <div class="project-tag">EDA</div>
+                            <div class="project-tag">Visualization</div>
                         </div>
                         <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -643,39 +728,121 @@
             </div>
             <div class="certificates-grid">
                 <div class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certificate-title">
+                            <h3>Introduction to Data Science</h3>
+                            <p>Cisco Networking Academy</p>
+                        </div>
                     </div>
-                    <div class="certificate-content">
-                        <h3>Introduction to Data Science</h3>
-                        <p>Cisco | Issued: 2025</p>
+                    <div class="certificate-body">
+                        <div class="certificate-meta">
+                            <span class="issue-date">Issued June 16, 2025 • 6 Hours</span>
+                        </div>
+                        <div class="course-content">
+                            <h4>Course Content:</h4>
+                            <ul>
+                                <li>Fundamentals of data science</li>
+                                <li>Data collection and cleaning</li>
+                                <li>Basic statistical analysis</li>
+                                <li>Introduction to machine learning and artificial intelligence</li>
+                                <li>Data visualization techniques</li>
+                            </ul>
+                        </div>
+                        <div class="certificate-action">
+                            <a href="#" class="view-certificate">View Certificate</a>
+                        </div>
                     </div>
                 </div>
                 <div class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="certificate-title">
+                            <h3>Data Analytics Essentials</h3>
+                            <p>Cisco Networking Academy</p>
+                        </div>
                     </div>
-                    <div class="certificate-content">
-                        <h3>Data Analytics Essentials</h3>
-                        <p>Cisco | Issued: 2025</p>
+                    <div class="certificate-body">
+                        <div class="certificate-meta">
+                            <span class="issue-date">Issued July 01, 2025 • 30 Hours</span>
+                        </div>
+                        <div class="course-content">
+                            <h4>Course Content:</h4>
+                            <ul>
+                                <li>Ethics and Bias in Data</li>
+                                <li>Data wrangling with Python</li>
+                                <li>Cleaning and Exploratory data analysis</li>
+                                <li>Transforming data with Excel</li>
+                                <li>SQL for data analysis</li>
+                                <li>Creating dashboards in Tableau</li>
+                                <li>Data storytelling</li>
+                            </ul>
+                        </div>
+                        <div class="certificate-action">
+                            <a href="#" class="view-certificate">View Certificate</a>
+                        </div>
                     </div>
                 </div>
                 <div class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="certificate-title">
+                            <h3>Python Basic</h3>
+                            <p>HackerRank</p>
+                        </div>
                     </div>
-                    <div class="certificate-content">
-                        <h3>Python Basic</h3>
-                        <p>HackerRank | Issued: 2024</p>
+                    <div class="certificate-body">
+                        <div class="certificate-meta">
+                            <span class="issue-date">Issued Aug 31, 2024</span>
+                        </div>
+                        <div class="course-content">
+                            <h4>Course Content:</h4>
+                            <ul>
+                                <li>Python syntax and basics</li>
+                                <li>Operators and control flow</li>
+                                <li>Functions and modules</li>
+                                <li>OOPS and scalar types</li>
+                                <li>Exception handling</li>
+                            </ul>
+                        </div>
+                        <div class="certificate-action">
+                            <a href="#" class="view-certificate">View Certificate</a>
+                        </div>
                     </div>
                 </div>
                 <div class="certificate-card">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div class="certificate-title">
+                            <h3>Bioinformatics for biologists</h3>
+                            <p>FutureLearn</p>
+                        </div>
                     </div>
-                    <div class="certificate-content">
-                        <h3>Bioinformatics for biologists</h3>
-                        <p>FutureLearn | Issued: 2021</p>
+                    <div class="certificate-body">
+                        <div class="certificate-meta">
+                            <span class="issue-date">Issued 2021</span>
+                        </div>
+                        <div class="course-content">
+                            <h4>Course Content:</h4>
+                            <ul>
+                                <li>Introduction to bioinformatics</li>
+                                <li>Sequence analysis and alignment</li>
+                                <li>Protein structure prediction</li>
+                                <li>Genomic data analysis</li>
+                                <li>Statistical methods in biology</li>
+                            </ul>
+                        </div>
+                        <div class="certificate-action">
+                            <a href="#" class="view-certificate">View Certificate</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -752,7 +919,8 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/rahularya271/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/rahularya271/" class="social-link"><i
+                        class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/imdeadlock" class="social-link"><i class="fab fa-github"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                 <a href="maito:rahularya271@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
