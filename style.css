@@ -565,14 +565,14 @@ nav {
 }
 
 .education-title h4 {
-    color: var(--secondary);
+    color: var(--accent);
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 8px;
 }
 
 .education-date {
-    color: var(--accent);
+    color: var(--secondary);
     font-weight: 600;
     font-size: 0.9rem;
 }
@@ -1042,12 +1042,13 @@ nav {
     align-items: center;
     gap: 16px;
     color: white;
+    height: 100px;
 }
 
 .certificate-icon {
     width: 48px;
     height: 48px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(255, 255, 255);
     border-radius: 8px;
     display: flex;
     align-items: center;
