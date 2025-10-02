@@ -137,7 +137,10 @@ nav {
 
 /* Hero Section */
 .hero {
+
     background: linear-gradient(135deg, #f7f9fc 0%, #eef2f7 100%);
+    background-image: url(/files/img/operations_research.png);
+
 }
 
 .hero-grid {
@@ -149,13 +152,45 @@ nav {
 }
 
 .hero-text-card {
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.hero-text-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/files/img/ds.jpeg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Adjust opacity of the background image here */
+    filter: blur(10px); /* Apply blur to the background */
+    z-index: -1; /* Ensure the image stays in the background */
+}
+
+.hero-text-card .hero-text {
+    position: relative; /* Keeps the text on top of the image */
+    color: #fff;
+    z-index: 1;
+}
+
+
+/* .hero-text-card {
     background: rgba(255, 255, 255, 0.9);
+    background-image: url(/files/img/ds.jpeg);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-}
+} */
 
 .hero-content h1 {
     font-size: 2.5rem;
@@ -305,6 +340,7 @@ nav {
 }
 
 .about-text {
+    background-image: url(files/img/ds.jpeg);
     flex: 1;
 }
 
@@ -542,15 +578,13 @@ nav {
 }
 
 .education-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    width: 55px;
+    height: 55px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.8rem;
     flex-shrink: 0;
 }
 
